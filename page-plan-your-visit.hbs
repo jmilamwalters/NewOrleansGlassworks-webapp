@@ -1,0 +1,268 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<main class="casper-content mega-main-content" role="main">
+
+  {{! The big featured header : relocated from above <main> element }}
+  <div class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    {{! Repeating .PNG Overlay }}
+    <div class="masthead-overlay">
+      {{! Native Casper buttons developed to supplant animated CSS3 buttons }}
+      <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
+        <a class="index-button mega-nav-trigger" href="#mega-primary-nav">Menu</a>
+      </nav>
+    </div>
+  </div>
+
+  {{! Post Content }}
+{{!-- Uncomment in order to show content
+  <article class="{{post_class}}">
+    <header class="post-header">
+      <h1 class="post-title">{{title}}</h1>
+    </header>
+    <section class="post-content">
+      {{content}}
+    </section>
+  </article>
+ --}}
+
+  {{! Custom HTML }}
+  <div class="page-container" id="glassworks-container">
+
+    <div class="glassworks-main">
+
+      <h1 class="post-title" id="planyourvisit">Plan Your Visit</h1>
+      <div class="ui divider"></div>
+
+      {{! Visitors Overview }}
+      <h1 id="visitors-overview">
+        Visitors Overview
+      </h1>
+      <p>Whether you have only fifteen minutes to browse our <a href="/gallery">gallery,</a> featuring work by our stable of artisans &ndash; both nationally and internationally renowned &ndash; or you are planning a momentous hands-on <a href="/design-your-own-event">group event,</a> the New Orleans Glassworks &amp; Printmaking Studio can accommodate your schedule and invigorate your senses.</p>
+
+      {{! Admission }}
+      <h1 id="admission">
+        Admission
+      </h1>
+      <p>The New Orleans Glassworks &amp; Printmaking Studio is the <strong>only institution</strong> in the Greater New Orleans Region where <strong>admission is completely <em>free-of-charge.</em></strong> </p>
+      <p>Our open-working studios, free hands-on <a href="/free-daily-demonstrations">daily demonstrations,</a> and <a href="/gallery">tax-free gallery</a> are open year-round to visitors, and afford a diversity of breathtaking activities for <em><strong>all ages,</strong></em> and interests.</p>
+
+      {{! Free Daily Demonstrations }}
+      <h1 id="free-daily-demonstrations">
+        Free Daily Demonstrations
+      </h1>
+      <p>Discover the intrigue of <a href="/free-daily-demonstrations/#hot-glass-now" class="hot-glass-now">Hot Glass Now,</a> or any of our other free demonstrations in <a href="/free-daily-demonstrations/#studio-workshops/">glass torchworking, printmaking, and metal sculpture.</a> </p>
+      <p>
+        <a class="ui animated button" href="/free-daily-demonstrations">
+          <span class="visible content">Learn More</span>
+          <span class="hidden content"><i class="right arrow icon"></i></span>
+        </a>
+      </p>
+
+      {{! Blow Your Own Glass }}
+      <h1 id="blow-your-own-glass">
+        Blow Your Own Glass
+      </h1>
+      <div class="ui items">
+
+        <!-- Mini-Workshops -->
+        <div class="item">
+          <div class="ui big dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/mini-workshops">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/glassblowing_mini-workshops.jpg"}}">
+          </div>
+          <div class="middle aligned content">
+            <a href="/mini-workshops" class="header">Mini-Workshops</a>
+          </div>
+        </div>
+
+        <!-- Short Courses -->
+        <div class="item">
+          <div class="ui big dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/short-courses">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/glassblowing_short-courses.jpg"}}">
+          </div>
+          <div class="middle aligned content">
+            <a href="/short-courses" class="header">Short Courses</a>
+          </div>
+        </div>
+
+        <!-- Wine + Design -->
+        <div class="item">
+          <div class="ui big dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/wine-and-design">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/glassblowing_wine-and-design.jpg"}}">
+          </div>
+          <div class="middle aligned content">
+            <a href="/wine-and-design" class="header">Wine + Design</a>
+          </div>
+        </div>
+
+      </div><!-- .items -->
+
+      {{! Studio Workshops }}
+      <h1 id="studio-workshops">
+        Studio Workshops (2&ndash;3 Hours)
+      </h1>
+      <div class="ui two doubling cards">
+        <div class="red card">
+          <div class="dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/short-courses/#glasstorchworking">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/flameworking.jpg"}}">
+          </div>
+          <div class="content">
+            <a href="/short-courses/#glasstorchworking" class="header">Glass Torchworking</a>
+          </div>
+        </div>
+        <div class="black card">
+          <div class="dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/short-courses/#monoprinting">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/printmaking.jpg"}}">
+          </div>
+          <div class="content">
+            <a href="/short-courses/#monoprinting" class="header">Printmaking</a>
+          </div>
+        </div>
+        <div class="pink card">
+          <div class="dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/short-courses/#copperenameling">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/copper-enameling.jpg"}}">
+          </div>
+          <div class="content">
+            <a href="/short-courses/#copperenameling" class="header">Copper Enameling</a>
+          </div>
+        </div>
+        <div class="purple card">
+          <div class="dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="/short-courses/#stainedglasspanel">
+                    <div class="ui massive inverted button">Learn More</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="{{asset "img/stained-glass.jpg"}}">
+          </div>
+          <div class="content">
+            <a href="/short-courses/#stainedglasspanel" class="header">Stained Glass</a>
+          </div>
+        </div>
+      </div>
+
+      {{! Explore Our Gallery }}
+      <h1 id="tax-free-gallery">
+        Explore Our Gallery
+      </h1>
+      <a href="/gallery">
+        <div class="ui fade reveal">
+          <img class="ui fluid image visible content" src="{{asset "img/gallery1.jpg"}}">
+          <img class="ui fluid image hidden content" src="{{asset "img/gallery3.jpg"}}">
+        </div>
+      </a>
+      {{! Location }}
+      <h1 id="location">Location</h1>
+      <p>The New Orleans Glassworks &amp; Printmaking Studio is located on 700 block of historically-celebrated Magazine Street in New Orleans’s Arts District, and is less than a 15-minute walk from all major hotels. Furthermore, visitors will find we are conveniently surrounded by New Orleans’s most famous restaurants and museums.</p>
+      <p>
+        <a href="/contact-us#directions">
+          <img alt="static-google-map" class="ui rounded fluid image" src="{{asset "img/map-static.jpg"}}">
+        </a>
+      </p>
+      <p>Need directions? Visit our <a href="/plan-your-visit/#location">Visitors Overview</a> page.</p>
+
+      {{! Hours }}
+      <h1 id="hours">Hours</h1>
+      <p>Unless otherwise noted, the New Orleans Glassworks &amp; Printmaking Studio is open six days a week, <strong>Monday through Saturday, 10:00 am to 5:00 pm.</strong></p>
+      <p>We are <strong>closed Sundays</strong> and for the following holidays:</p>
+      <ul>
+        <li>Thanksgiving</li>
+        <li>Christmas Eve</li>
+        <li>Christmas Day</li>
+        <li>New Years Day</li>
+        <li>Mardi Gras Day</li>
+      </ul>
+      <h2 id="summer-hours">Summer Hours</h2>
+      <p>For the months of June, July, and August, the New Orleans Glassworks &amp; Printmaking Studio is open <strong>Monday through Friday, 10:00 am to 5:00 pm.</strong></p>
+      <h2 id="extended-holiday-hours">Extended Holiday Hours</h2>
+      <p>For the months of November and December, the New Orleans Glassworks has Extended Holiday Hours, and is open from <strong>10:00 am to 6:00 pm.</strong></p>
+
+    </div><!-- .glassworks-main -->
+
+  </div><!-- #glassworks-container && .page-container -->
+
+  {{! Footer }}
+  {{> "footer"}}
+
+  {{! Copyright }}
+  {{> "copyright"}}
+
+  {{! Mega Menu Overlay }}
+  <div class="mega-overlay"></div>
+
+{{!--
+  <script type="text/javascript">
+    $('.ui.sticky')
+      .sticky({
+        context: '#glassworks-container'
+      });
+  </script>
+ --}}
+
+</main>
+
+{{/post}}

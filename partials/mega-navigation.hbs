@@ -1,0 +1,136 @@
+    {{! Mega Navigation Partial }}
+    <nav class="mega-nav">
+      <ul id="mega-primary-nav" class="mega-primary-nav">{{! REMOVED: .is-fixed }}
+
+        {{! VISITORS }}
+        <li class="has-children">
+          <a href="#0">Visitors</a>
+          <ul class="mega-nav-gallery is-hidden">
+            <li class="go-back"><a href="#0">BACK</a></li>
+
+            <!-- Bottom Bar: "Visitors Overview" -->
+            <li class="see-all"><a href="/plan-your-visit">Visitors Overview</a></li>
+
+            <!-- Blow Your Own Glass -->
+            <li class="plural">
+              <h2 class="mega-heading-top">Blow Your Own Glass</h2>
+                <a href="/seasonal-creations">30-Minute Mini-Workshops</a>
+                <a href="/short-courses">2-Hour Short Courses</a>
+                <a href="/wine-and-design">Wine &amp; Design</a>
+                <a href="/extended-courses">Extended Courses</a>
+            </li>
+
+            <!-- Plan Your Visit -->
+            <li class="singular">
+              <a class="mega-nav-item" href="/plan-your-visit"><!--TODO: wrap in link -->
+                <img src="{{asset "img/nav-img-planyourvisit.jpg"}}" class="ui rounded image" alt="Plan Your Visit"><!-- TODO: implement ``image`` helper -->
+                <h3>Plan Your Visit</h3> <!-- TODO: wrap in link -->
+              </a>
+            </li>
+
+            <!-- Free Daily Demonstrations -->
+            <li>
+              <a class="mega-nav-item" href="/free-daily-demonstrations"><!--TODOS: (a) wrap in link; (b) implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-demonstrations.jpg"}}" class="ui rounded image" alt="Team Building">
+                <h3>Free Daily Demonstrations</h3>
+              </a>
+            </li>
+
+            <!-- Tax-Free Gallery -->
+            <li>
+              <a href="/gallery" class="mega-nav-item"><!--TODOS: (a) implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-gallery.jpg"}}" class="ui rounded image" alt="Tax-Free Gallery">
+                <h3>Tax-Free Gallery</h3>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        {{! GROUP EVENTS }}
+        <li class="has-children">
+          <a href="#0">Group Events</a>
+          <ul class="mega-nav-gallery is-hidden">
+            <li class="go-back"><a href="#0">BACK</a></li>
+            <!-- Bottom Bar: "Group Events Overview" -->
+            <li class="see-all"><a href="{{@blog.url}}/group-events-overview">Events Overview</a></li>
+            <!-- Team Building -->
+            <li>
+              <a class="mega-nav-item" href="/team-building">
+                <img src="{{asset "img/nav-img-teambuilding.jpg"}}" class="ui rounded image" alt="Team Building"><!-- TODO: implement ``image`` helper -->
+                <h3>Team Building</h3>
+              </a>
+            </li>
+            <!-- Spouse Tours -->
+            <li>
+              <a class="mega-nav-item" href="/spouse-tours"><!--TODOS: (b) implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-spousetours.jpg"}}" class="ui rounded image" alt="Spouse Tours">
+                <h3>Spouse Tours</h3>
+              </a>
+            </li>
+            <!-- School + College Field Trips -->
+            <li>
+              <a class="mega-nav-item" href="/field-trips" ><!--TODOS: (a) implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-schooltrips.jpg"}}" class="ui rounded image" alt="School + College Field Trips">
+                <h3>School Trips</h3>
+              </a>
+            </li>
+            <!-- Receptions + Celebrations -->
+            <li>
+              <a class="mega-nav-item" href="/receptions"><!--TODOS: (a) implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-receptions.jpg"}}" class="ui rounded image" alt="Receptions + Celebrations">
+                <h3>Receptions</h3>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        {{! HANDS-ON PROGRAMS }}
+        <li class="has-children">
+          <a href="#0">Hands-On Programs</a>
+          <ul class="mega-nav-gallery is-hidden">
+            <li class="go-back"><a href="#0">BACK</a></li>
+
+            <!-- Bottom Bar: Group Events Overview -->
+            <li class="see-all"><a href="{{@blog.url}}/programs-overview">Hands-On Programs</a></li>
+
+            <!-- Blow Your Own Glass -->
+            <li class="plural">
+              <h2 class="mega-heading-top">Blow Your Own Glass</h2>
+                <a href="/seasonal-creations">30-Minute Mini-Workshops</a>
+                <a href="/short-courses">2-Hour Short Courses</a>
+                <a href="/wine-and-design">Wine &amp; Design</a>
+
+            </li>
+
+            <!-- Extended Courses -->
+            <li class="singular">
+              <a class="mega-nav-item" href="/extended-courses"><!--TODOS: implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-wine.jpg"}}" class="ui rounded image" alt="Extended Courses">
+                <h3>Extended Courses</h3>
+              </a>
+            </li>
+
+            <!-- Studio Tours + Activities -->
+            <li>
+              <a class="mega-nav-item" href="/group-events-overview"><!--TODOS: implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-tours.jpg"}}" class="ui rounded image" alt="Studio Tours + Activities">
+                <h3>Tours &amp; Activities</h3>
+              </a>
+            </li>
+
+            <!-- Young Adults -->
+            <li>
+              <a class="mega-nav-item" href="/young-adults"><!--TODOS: implement ``image`` helper -->
+                <img src="{{asset "img/nav-img-youngadults.jpg"}}" class="ui rounded image" alt="Young Adults">
+                <h3>Young Adults</h3>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        {{! Et Al }}
+        <li><a href="/commissions">Commissions</a></li>
+        <li><a href="/contact-us">Contact Us</a></li>
+        <li class="mega-button-close"><a href="javascript:void(0)">CLOSE</a></li>
+      </ul> <!-- primary-nav -->
+    </nav> <!-- mega-nav -->

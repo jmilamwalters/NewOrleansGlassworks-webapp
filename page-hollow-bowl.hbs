@@ -1,0 +1,122 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<main class="casper-content mega-main-content" role="main">
+
+  {{! Header }}
+  <div class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    {{! Repeating .PNG Overlay }}
+    <div class="masthead-overlay">
+      {{! Native Casper buttons developed to supplant animated CSS3 buttons }}
+      <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
+        <a class="index-button mega-nav-trigger" href="#mega-primary-nav">Menu</a>
+      </nav>
+    </div>
+  </div>
+
+  {{! Teal Masthead }}
+  <div class="ui teal inverted vertical segment">
+    <div class="ui stackable page grid">
+      <div class="row">
+        <div class="column">
+          <header class="post-header left aligned">
+            <h1 class="post-title">{{title}}</h1>
+            <h3 class="header">Venetian Glassblowing</h3>
+          </header>
+          <div class="ui inverted divider"></div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Workshop Metadata -->
+        <div class="nine wide column">
+          <div class="ui inverted segment">
+            <div class="ui inverted animated selection list">
+              <div class="item">
+                Lesson Type
+                <div class="right floated">Private</div>
+              </div>
+              <div class="item">
+                Ages
+                <div class="right floated">All ages</div>
+              </div>
+              <div class="item">
+                Length
+                <div class="right floated">30 minutes</div>
+              </div>
+              <div class="item">
+                Price
+                <div class="right floated">$89</div>
+              </div>
+            </div>
+          </div>
+          {{! Page Content }}
+          <section class="post-content">
+            {{content}}
+            <div class="ui large basic inverted animated fade button">
+              <div class="visible content">Blow Your Own Glass</div>
+              <div class="hidden content">Register Now!</div>
+            </div>
+          </section>
+        </div>
+        <div class="seven wide column">
+          <img src="{{asset "img/wireframe/image.png"}}" class="ui rounded fluid image" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Images -->
+  <div class="ui vertical segment">
+    <div class="ui page stackable grid">
+      <div class="three column row">
+        <div class="column">
+          <img src="{{asset "img/float-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+        <div class="column">
+          <img src="{{asset "img/bowl-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+        <div class="column">
+          <img src="{{asset "img/paperweight-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+      </div>
+      <div class="three column row">
+        <div class="column">
+          <img src="{{asset "img/bowl-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+        <div class="column">
+          <img src="{{asset "img/paperweight-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+        <div class="column">
+          <img src="{{asset "img/float-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+      </div>
+      <div class="three column row">
+        <div class="column">
+          <img src="{{asset "img/float-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+        <div class="column">
+          <img src="{{asset "img/paperweight-alt1.jpg"}}" class="ui fluid rounded image" alt="">
+        </div>
+      </div><!-- .grid -->
+    </div><!-- .segment -->
+  </div>
+
+
+  {{! Footer }}
+  {{> "footer"}}
+
+  {{! Copyright }}
+  {{> "copyright"}}
+
+  {{! Mega Menu Overlay }}
+  <div class="mega-overlay"></div>
+
+</main>
+
+{{/post}}

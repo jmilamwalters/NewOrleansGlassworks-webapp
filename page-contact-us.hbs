@@ -1,0 +1,120 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<main class="casper-content mega-main-content" role="main">
+
+  {{! The big featured header : relocated from above <main> element }}
+  <div class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+      {{! Native Casper buttons developed to supplant animated CSS3 buttons }}
+      <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+          <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
+          <a class="index-button mega-nav-trigger" href="#mega-primary-nav">Menu</a>
+      </nav>
+  </div>
+
+{{!--
+    {{! Post Content }}
+    <article class="{{post_class}}">
+      <header class="post-header">
+        <h1 class="post-title">{{title}}</h1>
+      </header>
+      <section class="post-content">
+        {{content}}
+      </section>
+    </article>
+ --}}
+
+   <div class="page-container">
+
+    <!-- Header -->
+    <h2 id="inquire">Make an inquiry.</h2>
+    <h5 style="text-transform: uppercase;">All form fields required</h5>
+
+        <form class="ui form segment" id="contact_form">
+
+          <!-- Name -->
+          <div class="two fields">
+            <div class="field">
+              <label for="fname">First Name</label>
+              <input id="fname" name="fname" type="text" placeholder="Jane" required="">
+            </div>
+             <div class="field">
+              <label for="lname">Last Name</label>
+              <input id="lname" name="lname" type="text" placeholder="Doe" required="">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="name@email.com" required="">
+          </div>
+
+          <!-- Telephone -->
+          <div class="field">
+            <label for="telephone">Mobile Telephone</label>
+            <input id="telephone" name="telephone" type="text" placeholder="(555) 789-1234" required="">
+          </div>
+
+          <!-- Nature of Inquiry -->
+          <div class="field">
+            <label for="inquiryType">Nature of Inquiry</label>
+            <div class="inquiry-select ui dropdown selection">
+              <input name="inquiryType" type="hidden" id="inquiryType" required="">
+              <div class="default text">Please select &hellip;</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="Classes & Workshops" data-text="Classes & Workshops">Classes &amp; Workshop</div>
+                <div class="item" data-value="Group Events" data-text="Group Events">Group Events</div>
+                <div class="item" data-value="Young Adults" data-text="Young Adult Workshops">Young Adult Workshops</div>
+                <div class="item" data-value="Seasonal Creations" data-text="Seasonal Creations">Seasonal Creations</div>
+                <div class="item" data-value="Tax-Free Gallery" data-text="Tax-Free Gallery">Tax-Free Gallery</div>
+                <div class="item" data-value="Commissions" data-text="Commissions">Commissions</div>
+                <div class="item" data-value="Other" data-text="Other">Other</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="field">
+            <label for="msg">Your Message</label>
+            <textarea id="msg" name="msg" cols="6" rows="6" required=""></textarea>
+          </div>
+
+          <!-- Button -->
+          <label for="submit"></label>
+          <div class="ui red submit button" id="submit" name="submit">Submit</div>
+
+          <!-- Error Message(s) -->
+{{!--           <div class="ui error message"></div> --}}
+
+          <!-- Success Message -->
+          <div class="ui success message hidden" id="successMessage">
+            <i class="close icon"></i>
+            <div class="header">
+              Thank you!
+            </div>
+            <p>Your message has been submitted. Our offices shall be in touch.</p>
+          </div>
+
+        </form><!-- .ui.form.segment -->
+
+      </div><!-- .page-container -->
+
+  {{! Footer }}
+  {{> "footer"}}
+
+  {{! Copyright }}
+  {{> "copyright"}}
+
+  {{! Mega Menu Overlay }}
+  <div class="mega-overlay"></div>
+
+</main>
+
+{{/post}}

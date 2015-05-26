@@ -1,0 +1,46 @@
+/* Variables  Colors [Borges Release]
+================================================== */
+/* Variables  Typography
+================================================== */
+body {
+  background-color: #e1e4e3;
+}
+/*
+#glassworks-container
+  background-color white
+  center(max_width: 1200px, pad: 3rem)
+  padding-bottom 6rem
+*/
+/*
+.glassworks-aside
+  col(1/3)
+//  shift(2/3);
+*/
+.glassworks-main {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.glassworks-main:before,
+.glassworks-main:after {
+  content: '';
+  display: table;
+}
+.glassworks-main:after {
+  clear: both;
+}
+.glassworks-main:last-child {
+  margin-right: 0%;
+}
+/* Elements
+================================================== */
+.hot-glass-now {
+  color: #990516;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
